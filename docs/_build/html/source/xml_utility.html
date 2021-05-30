@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>xml_utility module &#8212; Documentation Dominos v1.00</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-xml_utility">
+<span id="xml-utility-module"></span><h1>xml_utility module<a class="headerlink" href="#module-xml_utility" title="Lien permanent vers ce titre">¶</a></h1>
+<dl class="py class">
+<dt id="xml_utility.XMLUtility">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">xml_utility.</span></code><code class="sig-name descname"><span class="pre">XMLUtility</span></code><a class="headerlink" href="#xml_utility.XMLUtility" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class is used in order to generate a XML representation of a Domino game in order to save and restore games.</p>
+<dl class="py method">
+<dt id="xml_utility.XMLUtility.generate_XML_tree_from_game">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">generate_XML_tree_from_game</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xml_utility.XMLUtility.generate_XML_tree_from_game" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Generate a pre-formated XML tree from a Game.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>Game</strong> (<em>a Domino game.</em>) – </p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p><strong>tree</strong></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p>a XML tree (xml.etree.ElementTree)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="xml_utility.XMLUtility.get_xml_data">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">get_xml_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xml_utility.XMLUtility.get_xml_data" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Used to build the Game elements from a XML tree.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>file_name</strong> (<em>a str</em><em> (</em><em>the name of the XML save file</em><em>)</em>) – </p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p>player is a list of Player objects, with their Hand
+board is a Board
+undo_stack is a stack</p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p>A tuple (player, board, undo_stack)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="xml_utility.XMLUtility.load_game_from_xml">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">load_game_from_xml</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_game</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xml_utility.XMLUtility.load_game_from_xml" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="xml_utility.XMLUtility.save_game_to_xml">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">save_game_to_xml</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current_game</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xml_utility.XMLUtility.save_game_to_xml" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Saves the current game to an XML file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>current_game</strong> (<em>the current Game</em>) – </p></li>
+<li><p><strong>file_name</strong> (<em>the file name</em><em> (</em><em>without extension</em><em>)</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="xml_utility.XMLUtility.write_XML_tree_to_file">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">write_XML_tree_to_file</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tree</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xml_utility.XMLUtility.write_XML_tree_to_file" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Write an XML tree in a text file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tree</strong> (<em>a XML tree</em>) – </p></li>
+<li><p><strong>file_name</strong> (<em>a str</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Dominos</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Alan CASTELLINO, Mélissa ROUCH, Mohamed ADOCH.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/source/xml_utility.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

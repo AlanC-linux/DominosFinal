@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>player module &#8212; Documentation Dominos v1.00</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-player">
+<span id="player-module"></span><h1>player module<a class="headerlink" href="#module-player" title="Lien permanent vers ce titre">¶</a></h1>
+<dl class="py class">
+<dt id="player.AI">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">player.</span></code><code class="sig-name descname"><span class="pre">AI</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ai_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#player.AI" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Bases : <a class="reference internal" href="#player.Player" title="player.Player"><code class="xref py py-class docutils literal notranslate"><span class="pre">player.Player</span></code></a></p>
+<p>A class that represents a computer player in a domino game. It inherits from Player.</p>
+<dl class="py attribute">
+<dt id="player.AI.name">
+<code class="sig-name descname"><span class="pre">name</span></code><a class="headerlink" href="#player.AI.name" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>The name of the player</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="player.AI.position">
+<code class="sig-name descname"><span class="pre">position</span></code><a class="headerlink" href="#player.AI.position" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>The geographical position of the player around the table</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="player.AI.hand">
+<code class="sig-name descname"><span class="pre">hand</span></code><a class="headerlink" href="#player.AI.hand" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>The hand of the player</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Hand object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="player.AI.is_ai">
+<code class="sig-name descname"><span class="pre">is_ai</span></code><a class="headerlink" href="#player.AI.is_ai" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>True is the player is an AI, false otherwise</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="player.AI.type">
+<code class="sig-name descname"><span class="pre">type</span></code><a class="headerlink" href="#player.AI.type" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>The AI type (random, greedy, Minimax)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="player.AI.depth">
+<code class="sig-name descname"><span class="pre">depth</span></code><a class="headerlink" href="#player.AI.depth" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>The depth used to compute the moves for the Minimax algorithm (defaults to 1 for Random and Greedy AI).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="player.AI.chose_tile_to_play">
+<code class="sig-name descname"><span class="pre">chose_tile_to_play</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hand</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#player.AI.chose_tile_to_play" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Choses the tile to play for the computer player, given a Board and a Hand.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>hand</strong> (<em>the computer's hand</em>) – </p></li>
+<li><p><strong>board</strong> (<em>the current Board</em>) – </p></li>
+<li><p><strong>game</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="player.Player">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">player.</span></code><code class="sig-name descname"><span class="pre">Player</span></code><a class="headerlink" href="#player.Player" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class that represents a player in a domino game.</p>
+<p>…</p>
+<dl class="py attribute">
+<dt id="player.Player.name">
+<code class="sig-name descname"><span class="pre">name</span></code><a class="headerlink" href="#player.Player.name" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>The name of the player</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="player.Player.position">
+<code class="sig-name descname"><span class="pre">position</span></code><a class="headerlink" href="#player.Player.position" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>The geographical position of the player around the table</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="player.Player.hand">
+<code class="sig-name descname"><span class="pre">hand</span></code><a class="headerlink" href="#player.Player.hand" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>The hand of the player</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Hand object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="player.Player.is_ai">
+<code class="sig-name descname"><span class="pre">is_ai</span></code><a class="headerlink" href="#player.Player.is_ai" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>True is the player is an AI, false otherwise</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">wants_to_play():</span></code></dt>
+<dd><p>The player chooses a tile from his hand that he wants to play</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">side_to_play():</span></code></dt>
+<dd><p>The player chooses the side of the board on wich he wants to play</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Dominos</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Alan CASTELLINO, Mélissa ROUCH, Mohamed ADOCH.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/source/player.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

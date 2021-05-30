@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>deck module &#8212; Documentation Dominos v1.00</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-deck">
+<span id="deck-module"></span><h1>deck module<a class="headerlink" href="#module-deck" title="Lien permanent vers ce titre">¶</a></h1>
+<dl class="py class">
+<dt id="deck.Deck">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">deck.</span></code><code class="sig-name descname"><span class="pre">Deck</span></code><a class="headerlink" href="#deck.Deck" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class to represent a deck of tiles used in a domino game.</p>
+<p>…</p>
+<dl class="py attribute">
+<dt id="deck.Deck.tiles">
+<code class="sig-name descname"><span class="pre">tiles</span></code><a class="headerlink" href="#deck.Deck.tiles" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>The list of the tiles in the deck</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list of tile object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="deck.Deck.length">
+<code class="sig-name descname"><span class="pre">length</span></code><a class="headerlink" href="#deck.Deck.length" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>The length of the deck at the beginning of the game</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">add_tile(tile):</span></code></dt>
+<dd><p>Add a specified tile in the deck</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">add_predefined(max_value):</span></code></dt>
+<dd><p>Create a complete deck of tiles of a basic domino game</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">shuffle():</span></code></dt>
+<dd><p>Shuffle the deck</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deck.Deck.add_predefined">
+<code class="sig-name descname"><span class="pre">add_predefined</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deck.Deck.add_predefined" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Create a complete deck of tiles from 0 to max_value and set the value
+of length.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>max_value</strong> (<em>int</em>) – The highest value of a tile in the deck</p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deck.Deck.add_tile">
+<code class="sig-name descname"><span class="pre">add_tile</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#deck.Deck.add_tile" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Add a specified tile given in the parameters a the end of the deck.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>tile</strong> (<em>tile object</em>) – Contains the value of the tile added</p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="deck.Deck.shuffle">
+<code class="sig-name descname"><span class="pre">shuffle</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#deck.Deck.shuffle" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Shuffle the deck using the random.shuffle(x) function.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Dominos</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Alan CASTELLINO, Mélissa ROUCH, Mohamed ADOCH.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/source/deck.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

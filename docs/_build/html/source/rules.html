@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rules module &#8212; Documentation Dominos v1.00</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-rules">
+<span id="rules-module"></span><h1>rules module<a class="headerlink" href="#module-rules" title="Lien permanent vers ce titre">¶</a></h1>
+<dl class="py class">
+<dt id="rules.RulesManager">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">rules.</span></code><code class="sig-name descname"><span class="pre">RulesManager</span></code><a class="headerlink" href="#rules.RulesManager" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class that creates rules managers for a domino game.</p>
+<p>…</p>
+<dl class="py attribute">
+<dt id="rules.RulesManager.None">
+<code class="sig-name descname"><span class="pre">None</span></code><a class="headerlink" href="#rules.RulesManager.None" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">has_playable_tile(player,</span> <span class="pre">board):</span></code></dt>
+<dd><p>Check if a player can play a tile on a board from his hand</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">is_playable_on_left_side(tile,</span> <span class="pre">board):</span></code></dt>
+<dd><p>Check if a tile can be played on the left side of a board</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">is_playable_on_right_side(tile,</span> <span class="pre">board):</span></code></dt>
+<dd><p>Check if a tile can be played on the right side of a board</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rules.RulesManager.has_playable_tile">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">has_playable_tile</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hand</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">board</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rules.RulesManager.has_playable_tile" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Check if a specified player can play a tile on a specified board
+from his hand.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>player</strong> (<em>Player object</em>) – The player that will have his hand checked tile by tile</p></li>
+<li><p><strong>board</strong> (<em>Board object</em>) – The board of the current game</p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>A boolean that contains True if the player has a playable tile and</em></p></li>
+<li><p><em>False otherwise</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rules.RulesManager.is_playable">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">is_playable</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">board</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rules.RulesManager.is_playable" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Check if a specified tile can be played on any side of the board.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tile</strong> (<em>Tile object</em>) – The tile an user chooses to play</p></li>
+<li><p><strong>board</strong> (<em>Board object</em>) – The board of the current game</p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>A boolean that contains True if the tile can be played and</em></p></li>
+<li><p><em>False otherwise</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rules.RulesManager.is_playable_on_left_side">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">is_playable_on_left_side</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">board</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rules.RulesManager.is_playable_on_left_side" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Check if a specified tile can be played on the left side of a
+specified board.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tile</strong> (<em>Tile object</em>) – The tile an user chooses to play</p></li>
+<li><p><strong>board</strong> (<em>Board object</em>) – The board of the current game</p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>A boolean that contains True if the tile can be played and</em></p></li>
+<li><p><em>False otherwise</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rules.RulesManager.is_playable_on_right_side">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">is_playable_on_right_side</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">board</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rules.RulesManager.is_playable_on_right_side" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Check if a specified tile can be played on the right side of a
+specified board.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tile</strong> (<em>Tile object</em>) – The tile an user chooses to play</p></li>
+<li><p><strong>board</strong> (<em>Board object</em>) – The board of the current game</p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>A boolean that contains True if the tile can be played and</em></p></li>
+<li><p><em>False otherwise</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="rules.RulesManager.list_of_playable_tiles">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">list_of_playable_tiles</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hand</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">board</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rules.RulesManager.list_of_playable_tiles" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Generates a list of all playable tiles from a hand, given a particular board.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>hand</strong> (<em>Hand object</em>) – The hand for which to determine playable tiles</p></li>
+<li><p><strong>board</strong> (<em>Board object</em>) – The board of the current game</p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p>A list of all playable tiles (Tile objects)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Dominos</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Alan CASTELLINO, Mélissa ROUCH, Mohamed ADOCH.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/source/rules.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>encrypt_decrypt module &#8212; Documentation Dominos v1.00</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-encrypt_decrypt">
+<span id="encrypt-decrypt-module"></span><h1>encrypt_decrypt module<a class="headerlink" href="#module-encrypt_decrypt" title="Lien permanent vers ce titre">¶</a></h1>
+<dl class="py class">
+<dt id="encrypt_decrypt.EncryptDecrypt">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">encrypt_decrypt.</span></code><code class="sig-name descname"><span class="pre">EncryptDecrypt</span></code><a class="headerlink" href="#encrypt_decrypt.EncryptDecrypt" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>When a game is saved, the XML representation of the game is « encrypted » to prevent cheating (i.e. manually modifying the players” hands and the board).
+The « encryption » is done by creating an « .enc » file where each character of the XML file is replaced with its hexadecimal ASCII value.
+The original file is removed.</p>
+<dl class="py method">
+<dt id="encrypt_decrypt.EncryptDecrypt.ascii_string_to_hex">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">ascii_string_to_hex</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#encrypt_decrypt.EncryptDecrypt.ascii_string_to_hex" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Converts each character of an ASCII string to its 2-digit hex value and returns the string. Each character representation is separated by a space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>input_string</strong> (<em>str</em>) – </p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p><strong>output_string</strong></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="encrypt_decrypt.EncryptDecrypt.decrypt_file">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">decrypt_file</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_to_enc_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_ext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#encrypt_decrypt.EncryptDecrypt.decrypt_file" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Decrypts the encoded file, writes back the XML file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path_to_enc_file</strong> (<em>str</em>) – </p></li>
+<li><p><strong>target_ext</strong> (<em>str</em><em> (</em><em>'xml' in most cases</em><em>)</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="encrypt_decrypt.EncryptDecrypt.encrypt_and_store_file">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">encrypt_and_store_file</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_to_original_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#encrypt_decrypt.EncryptDecrypt.encrypt_and_store_file" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Reads the file, encrypts it and stores the encrypted version.
+It also removes the original file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>path_to_original_file</strong> (<em>str</em>) – </p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="encrypt_decrypt.EncryptDecrypt.file_to_string">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">file_to_string</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_to_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#encrypt_decrypt.EncryptDecrypt.file_to_string" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Reads a file and returns its content as a str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>path_to_file</strong> (<em>str</em>) – </p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p><strong>content</strong></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="encrypt_decrypt.EncryptDecrypt.hex_to_ascii_string">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">hex_to_ascii_string</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#encrypt_decrypt.EncryptDecrypt.hex_to_ascii_string" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Computes back the original string from the encrypted string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>input_string</strong> (<em>str</em>) – </p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p><strong>output_string</strong></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="encrypt_decrypt.EncryptDecrypt.string_to_file">
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">string_to_file</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_to_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">string_to_write</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#encrypt_decrypt.EncryptDecrypt.string_to_file" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Writes a string to a file. Creates the file if it doesn’t exist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path_to_file</strong> (<em>str</em>) – </p></li>
+<li><p><strong>string_to_write</strong> (<em>str</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Dominos</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Alan CASTELLINO, Mélissa ROUCH, Mohamed ADOCH.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/source/encrypt_decrypt.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

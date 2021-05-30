@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>game_manager_for_cli module &#8212; Documentation Dominos v1.00</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-game_manager_for_cli">
+<span id="game-manager-for-cli-module"></span><h1>game_manager_for_cli module<a class="headerlink" href="#module-game_manager_for_cli" title="Lien permanent vers ce titre">¶</a></h1>
+<dl class="py class">
+<dt id="game_manager_for_cli.GameManagerForCLI">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">game_manager_for_cli.</span></code><code class="sig-name descname"><span class="pre">GameManagerForCLI</span></code><a class="headerlink" href="#game_manager_for_cli.GameManagerForCLI" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used to manage the progress of a complete game in CLI mode.
+The CLI messages are not created and displayed here.</p>
+<dl class="py attribute">
+<dt id="game_manager_for_cli.GameManagerForCLI.is_over">
+<code class="sig-name descname"><span class="pre">is_over</span></code><a class="headerlink" href="#game_manager_for_cli.GameManagerForCLI.is_over" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>a bool set to True when the game is finished (a player has no tiles anymore or no other tile can be played)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="game_manager_for_cli.GameManagerForCLI.current_player">
+<code class="sig-name descname"><span class="pre">current_player</span></code><a class="headerlink" href="#game_manager_for_cli.GameManagerForCLI.current_player" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>an int set to 0 when the human plays and to 1 when the computer plays.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="game_manager_for_cli.GameManagerForCLI.number_of_players">
+<code class="sig-name descname"><span class="pre">number_of_players</span></code><a class="headerlink" href="#game_manager_for_cli.GameManagerForCLI.number_of_players" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>an int constant equal to 2 (human vs computer)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="game_manager_for_cli.GameManagerForCLI.players">
+<code class="sig-name descname"><span class="pre">players</span></code><a class="headerlink" href="#game_manager_for_cli.GameManagerForCLI.players" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list of Player objects</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="game_manager_for_cli.GameManagerForCLI.board">
+<code class="sig-name descname"><span class="pre">board</span></code><a class="headerlink" href="#game_manager_for_cli.GameManagerForCLI.board" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Board object containing the current state of the board</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="game_manager_for_cli.GameManagerForCLI.deck">
+<code class="sig-name descname"><span class="pre">deck</span></code><a class="headerlink" href="#game_manager_for_cli.GameManagerForCLI.deck" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Deck object: the set of tiles used in the game</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="game_manager_for_cli.GameManagerForCLI.with_draw">
+<code class="sig-name descname"><span class="pre">with_draw</span></code><a class="headerlink" href="#game_manager_for_cli.GameManagerForCLI.with_draw" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>a bool constant set to False: play without draw.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="game_manager_for_cli.GameManagerForCLI.end_game">
+<code class="sig-name descname"><span class="pre">end_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#game_manager_for_cli.GameManagerForCLI.end_game" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Ends a game by computing and displaying the winner.
+Requests if the player wants to start a new game.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><em>None if the players doesn’t want to play a new game.</em></p></li>
+<li><p><em>A Game object if the player wants to play one more game.</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="game_manager_for_cli.GameManagerForCLI.first_player_to_play">
+<code class="sig-name descname"><span class="pre">first_player_to_play</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#game_manager_for_cli.GameManagerForCLI.first_player_to_play" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Determines the first player to play.
+In this version, the Human player always begins.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="game_manager_for_cli.GameManagerForCLI.game_is_over">
+<code class="sig-name descname"><span class="pre">game_is_over</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#game_manager_for_cli.GameManagerForCLI.game_is_over" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Checks if a game is over.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p>A bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="game_manager_for_cli.GameManagerForCLI.init_ai">
+<code class="sig-name descname"><span class="pre">init_ai</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#game_manager_for_cli.GameManagerForCLI.init_ai" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Set the players played by the computer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="game_manager_for_cli.GameManagerForCLI.init_board">
+<code class="sig-name descname"><span class="pre">init_board</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#game_manager_for_cli.GameManagerForCLI.init_board" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Initializes the board.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="game_manager_for_cli.GameManagerForCLI.init_deck">
+<code class="sig-name descname"><span class="pre">init_deck</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#game_manager_for_cli.GameManagerForCLI.init_deck" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Initialises the deck by adding tiles and shuffling it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="game_manager_for_cli.GameManagerForCLI.init_game">
+<code class="sig-name descname"><span class="pre">init_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#game_manager_for_cli.GameManagerForCLI.init_game" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Initializes the game (deck, players, board, which is first to play)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="game_manager_for_cli.GameManagerForCLI.init_mode">
+<code class="sig-name descname"><span class="pre">init_mode</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#game_manager_for_cli.GameManagerForCLI.init_mode" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Initialize the game mode</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="game_manager_for_cli.GameManagerForCLI.init_players">
+<code class="sig-name descname"><span class="pre">init_players</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#game_manager_for_cli.GameManagerForCLI.init_players" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Creates the players (human and computer) and creates their hand, fills them with tiles.
+The Computer players are always placed after the human players.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="game_manager_for_cli.GameManagerForCLI.init_with_draw">
+<code class="sig-name descname"><span class="pre">init_with_draw</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#game_manager_for_cli.GameManagerForCLI.init_with_draw" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Choose to play with a draw or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="game_manager_for_cli.GameManagerForCLI.play">
+<code class="sig-name descname"><span class="pre">play</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#game_manager_for_cli.GameManagerForCLI.play" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Plays one turn (for human or AI player)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="game_manager_for_cli.GameManagerForCLI.player_who_has_tile_in_hand">
+<code class="sig-name descname"><span class="pre">player_who_has_tile_in_hand</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#game_manager_for_cli.GameManagerForCLI.player_who_has_tile_in_hand" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Finds if a player has a particular Tile (passed as paramater)
+:param tile:
+:type tile: a Tile objects which is equal (==) to the seeked tile</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p>A Player object (from the players list) if one of the players has the tile passed as parameter in hand, None otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="game_manager_for_cli.GameManagerForCLI.start_game">
+<code class="sig-name descname"><span class="pre">start_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#game_manager_for_cli.GameManagerForCLI.start_game" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Makes the current game continue between each move. Checks if the game is completed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="game_manager_for_cli.GameManagerForCLI.update_game_state">
+<code class="sig-name descname"><span class="pre">update_game_state</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">side</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#game_manager_for_cli.GameManagerForCLI.update_game_state" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Update the state of the game by placing the played tile on the board and removing it from the player’s hand, checking if the game is over.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tile</strong> (<em>the Tile object to be played</em>) – </p></li>
+<li><p><strong>side</strong> (<em>a string &quot;left&quot;</em><em> or </em><em>&quot;right&quot;</em>) – </p></li>
+<li><p><strong>player</strong> (<em>a Player object: the player who plays.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Dominos</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Alan CASTELLINO, Mélissa ROUCH, Mohamed ADOCH.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/source/game_manager_for_cli.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

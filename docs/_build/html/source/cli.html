@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cli module &#8212; Documentation Dominos v1.00</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-cli">
+<span id="cli-module"></span><h1>cli module<a class="headerlink" href="#module-cli" title="Lien permanent vers ce titre">¶</a></h1>
+<dl class="py class">
+<dt id="cli.CLI">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">cli.</span></code><code class="sig-name descname"><span class="pre">CLI</span></code><a class="headerlink" href="#cli.CLI" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class that handles the displays on the screen
+and the interactions with the users
+when using the Command Line Interface</p>
+<p>…</p>
+<dl class="py attribute">
+<dt id="cli.CLI.None">
+<code class="sig-name descname"><span class="pre">None</span></code><a class="headerlink" href="#cli.CLI.None" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">error():</span></code></dt>
+<dd><p>Displays an error message when the user enters an invalid answer</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">error_tile():</span></code></dt>
+<dd><p>Displays an error message when the user picked a wrong tile to play</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">error_pos():</span></code></dt>
+<dd><p>Displays an error message when the user picked a wrong side to play</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cli.CLI.request_number_of_ai">
+<code class="sig-name descname"><span class="pre">request_number_of_ai</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cli.CLI.request_number_of_ai" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Requests the number of AI players (automatically played by the computer)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">request_user_info():</span></code></dt>
+<dd><p>Asks and returns the user’s name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">prompt_user_to_play(player):</span></code></dt>
+<dd><p>Displays the name of the next user to play</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">request_number_of_players():</span></code></dt>
+<dd><p>Asks and returns the number of players about to play</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">game_with_draw():</span></code></dt>
+<dd><p>Asks and returns if the next game will be with or without a draw</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cli.CLI.request_mode">
+<code class="sig-name descname"><span class="pre">request_mode</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cli.CLI.request_mode" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Allows the user to chose to play in PvP mode (only humans) or PvE mode (human(s) vs engine(s))</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">show_hand(hand):</span></code></dt>
+<dd><p>Displays the specified hand</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">show_board(board):</span></code></dt>
+<dd><p>displays the specified board</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cli.CLI.show_tile_chosen">
+<code class="sig-name descname"><span class="pre">show_tile_chosen</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cli.CLI.show_tile_chosen" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Shows the tile played by a player (human or engine) to the user.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">request_tile_to_play():</span></code></dt>
+<dd><p>Asks and returns the tile the user wants to play</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">request_side():</span></code></dt>
+<dd><p>Asks and returns the side the user choose to play on</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cli.CLI.nothing_to_play">
+<code class="sig-name descname"><span class="pre">nothing_to_play</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cli.CLI.nothing_to_play" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays a message when a player has no tile to play.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cli.CLI.nothing_to_play_for_ai">
+<code class="sig-name descname"><span class="pre">nothing_to_play_for_ai</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cli.CLI.nothing_to_play_for_ai" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays an information to the user when the computer has nothing to play.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cli.CLI.diplay_winner">
+<code class="sig-name descname"><span class="pre">diplay_winner</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cli.CLI.diplay_winner" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays the passed player as the winner of the game.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cli.CLI.request_new_game">
+<code class="sig-name descname"><span class="pre">request_new_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cli.CLI.request_new_game" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Asks the user if he/she wants to start a new game.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cli.CLI.request_AI_Strength">
+<code class="sig-name descname"><span class="pre">request_AI_Strength</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cli.CLI.request_AI_Strength" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Asks the user to choose the strength of the AI (between 0 and 4).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cli.CLI.display_winner">
+<code class="sig-name descname"><span class="pre">display_winner</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cli.CLI.display_winner" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays the passed player as the winner of the game. Does not computes which player is the winner.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>player</strong> (<em>Player object</em>) – </p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cli.CLI.error">
+<code class="sig-name descname"><span class="pre">error</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cli.CLI.error" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays an error message if the user entered an invalid answer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cli.CLI.error_pos">
+<code class="sig-name descname"><span class="pre">error_pos</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cli.CLI.error_pos" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays an error message when the user picked a wrong side to play.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cli.CLI.error_tile">
+<code class="sig-name descname"><span class="pre">error_tile</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cli.CLI.error_tile" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays an error message when the user picked a tile he can’t play.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cli.CLI.game_with_draw">
+<code class="sig-name descname"><span class="pre">game_with_draw</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cli.CLI.game_with_draw" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Asks to the user and returns if the next game will be
+with or without a draw.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p><strong>draw</strong> – Contains the input of the user</p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id0">
+<code class="sig-name descname"><span class="pre">nothing_to_play</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays a message when a player has no tile to play.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p>None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id1">
+<code class="sig-name descname"><span class="pre">nothing_to_play_for_ai</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id1" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays an information to the user when the computer has nothing to play.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cli.CLI.prompt_user_to_play">
+<code class="sig-name descname"><span class="pre">prompt_user_to_play</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cli.CLI.prompt_user_to_play" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays the name of the next user to play.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>player</strong> (<em>Player object</em>) – Uses to display the player’s name</p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id2">
+<code class="sig-name descname"><span class="pre">request_AI_Strength</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id2" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Ask the user the AI’s difficulty.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p><strong>an int</strong></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p>The AI’s strength</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id3">
+<code class="sig-name descname"><span class="pre">request_mode</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id3" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Allows the user to chose to play in PvP mode (only humans) or PvE mode (human(s) vs engine(s))</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p><strong>A string</strong></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p>“PvP” or “PvE” according to the user’s choice.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id4">
+<code class="sig-name descname"><span class="pre">request_new_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id4" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Asks the user if he/she wants to start a new game.
+:returns:
+:rtype: A bool</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id5">
+<code class="sig-name descname"><span class="pre">request_number_of_ai</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id5" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Requests the number of AI players (automatically played by the computer)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p>An int which is the desired number of AI players.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cli.CLI.request_number_of_players">
+<code class="sig-name descname"><span class="pre">request_number_of_players</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cli.CLI.request_number_of_players" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Asks and returns the number of players involved in the game.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p>An int that contains the input of the user</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cli.CLI.request_side">
+<code class="sig-name descname"><span class="pre">request_side</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cli.CLI.request_side" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Asks and returns the side the user choose to play on</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p><strong>side</strong> – Contains the side chossed by the user</p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cli.CLI.request_tile_to_play">
+<code class="sig-name descname"><span class="pre">request_tile_to_play</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cli.CLI.request_tile_to_play" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Asks and returns the tile the user wants to play</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p><strong>index</strong> – Contains th index of the tile in the hand of the player</p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cli.CLI.request_user_info">
+<code class="sig-name descname"><span class="pre">request_user_info</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cli.CLI.request_user_info" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Asks and returns the user’s name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p><strong>name</strong> – Contains the name the user entered</p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cli.CLI.show_board">
+<code class="sig-name descname"><span class="pre">show_board</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cli.CLI.show_board" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays the specified board.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>board</strong> (<em>Board object</em>) – The board that needs to be displayed</p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="cli.CLI.show_hand">
+<code class="sig-name descname"><span class="pre">show_hand</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cli.CLI.show_hand" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays the specified hand.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>hand</strong> (<em>Hand object</em>) – The hand that needs to be displayed</p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="id6">
+<code class="sig-name descname"><span class="pre">show_tile_chosen</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">side</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id6" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Shows the tile played by a player (human or engine) to the user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Dominos</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Alan CASTELLINO, Mélissa ROUCH, Mohamed ADOCH.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/source/cli.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

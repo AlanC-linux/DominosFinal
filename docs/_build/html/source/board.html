@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>board module &#8212; Documentation Dominos v1.00</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-board">
+<span id="board-module"></span><h1>board module<a class="headerlink" href="#module-board" title="Lien permanent vers ce titre">¶</a></h1>
+<dl class="py class">
+<dt id="board.Board">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">board.</span></code><code class="sig-name descname"><span class="pre">Board</span></code><a class="headerlink" href="#board.Board" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class that represents the board of domino game.</p>
+<p>…</p>
+<dl class="py attribute">
+<dt id="board.Board.board">
+<code class="sig-name descname"><span class="pre">board</span></code><a class="headerlink" href="#board.Board.board" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>a collection of deque objects</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">is_empty():</span></code></dt>
+<dd><p>Determine if the board is empty</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">left():</span></code></dt>
+<dd><p>Returns the value the most on the left side of the board</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">right():</span></code></dt>
+<dd><p>Returns the value the most on the right side of the board</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">append_on_left_side():</span></code></dt>
+<dd><p>Add a tile on the left side of the board</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">append_on_right_side():</span></code></dt>
+<dd><p>Add a tile on the right side of the board</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="board.Board.append_on_left_side">
+<code class="sig-name descname"><span class="pre">append_on_left_side</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#board.Board.append_on_left_side" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Add a tile on the left side of the board. Flips it if necessary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>tile</strong> (<em>a tile object</em>) – The tile that will be added to the board</p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="board.Board.append_on_right_side">
+<code class="sig-name descname"><span class="pre">append_on_right_side</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#board.Board.append_on_right_side" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Add a tile on the right side of the board. Flips it if necessary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>tile</strong> (<em>a tile object</em>) – The tile that will be added to the board</p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="board.Board.is_empty">
+<code class="sig-name descname"><span class="pre">is_empty</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#board.Board.is_empty" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Determines if the board is empty or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p>A boolean that contains True if the board is empty and False otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="board.Board.left">
+<code class="sig-name descname"><span class="pre">left</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#board.Board.left" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Gets the value the most on the left of the board and returns it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><em>An int that contains the value of the tile the most on the left</em></p></li>
+<li><p><em>according to its orientation.</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="board.Board.remove_leftmost_tile">
+<code class="sig-name descname"><span class="pre">remove_leftmost_tile</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#board.Board.remove_leftmost_tile" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="board.Board.remove_rightmost_tile">
+<code class="sig-name descname"><span class="pre">remove_rightmost_tile</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#board.Board.remove_rightmost_tile" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="board.Board.right">
+<code class="sig-name descname"><span class="pre">right</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#board.Board.right" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Gets the value the most on the right of the board and returns it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><em>An int that contains the value of the tile the most on the right</em></p></li>
+<li><p><em>according to its orientation.</em></p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Dominos</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Alan CASTELLINO, Mélissa ROUCH, Mohamed ADOCH.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/source/board.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,244 @@
+#:kivy 1.0
+#:import kivy kivy
+#:import win kivy.core.window
+#:import partial functools
+#:import Factory kivy.factory.Factory
+#:import os os
+
+<DominoGame>:
+
+	Image:
+        id: fond
+		source: "Image/themes/background1.png"
+		allow_stretch: True
+		keep_ratio: False
+		size: root.size
+		size_hint: (None, None)
+
+    GridLayout:
+        id: board
+        cols: root.NUMBER_OF_COLS
+        rows: root.NUMBER_OF_ROWS
+        size: (50 * self.cols, 50 * self.rows)
+        size_hint: (None, None)
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+    BoxLayout:
+        orientation: 'horizontal'
+        spacing: 20
+        size_hint: (None, None)
+        pos_hint: {'x': 0.05, 'top': 0.95}
+
+        Button:
+            background_normal: "Image/icons/restart_up.png"
+            background_down: "Image/icons/restart_down.png"
+            size: (50, 50)
+            size_hint: (None, None)
+            on_press: root.when_restart_button_pressed()
+            on_release: root.change_board()
+
+        Button:
+            id: undo_button 
+            background_normal: "Image/icons/takeback_up.png"
+            background_disabled_normal: "Image/icons/takeback_down.png"
+            background_down: "Image/icons/takeback_down.png"
+            size: (50,50)
+            size_hint: (None, None)
+            on_press: root.when_undo_button_pressed()
+            disabled: True
+
+        Button:
+            background_normal: "Image/icons/save_up.png"
+            background_down: "Image/icons/save_down.png"
+            size: (50, 50)
+            size_hint: (None, None)
+            on_press: Factory.PopupSaveMenu().open()
+
+    BoxLayout:
+        orientation:'horizontal'
+        spacing: 20
+        size_hint: (None, None)
+        pos_hint: {'right': 0.9, 'top': 0.95}
+
+        Button:
+            background_normal: "Image/icons/sound_up.png"
+            background_down: "Image/icons/sound_down.png"
+            size: (50, 50)
+            size_hint: (None, None)
+            on_press: root.when_change_sound_state_button_pressed()
+
+        Button:
+            background_normal: "Image/icons/change_background_up2.png"
+            background_down: "Image/icons/change_background_down2.png"
+            size_hint: (None,None)
+            size: (50,50)
+            on_press: root.when_change_background_button_pressed()
+
+        Button:
+            background_normal: "Image/icons/help_up.png"
+            background_down: "Image/icons/help_down.png"
+            size: (50, 50)
+            size_hint: (None, None)
+            on_press: root.when_hint_button_pressed()
+
+    Button: 
+        id: left_selection_button
+        background_normal: "Image/icons/play_on_left_up2.png"
+        background_disabled_normal: "Image/icons/play_on_left_down2.png"
+        size: (100, 100)
+        size_hint: (None, None)
+        pos_hint: {'x': 0.1, 'y': 0.2}
+        disabled: True
+
+    Button: 
+        id: right_selection_button
+        background_normal: "Image/icons/play_on_right_up2.png"
+        background_disabled_normal: "Image/icons/play_on_right_down2.png"
+        size: (100, 100)
+        size_hint: (None, None)
+        pos_hint: {'x': 0.85, 'y': 0.2}
+        disabled: True
+
+    Label: 
+        id: message_tray
+        text: "You can't play this tile"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+        font_size: '20sp'
+        color: (0,0,0,0)
+
+    Label: 
+        id: winner
+        text: "Welcome to Domino Game !"
+        pos_hint: {'center_x': 0.5, 'y': 0.65}
+        font_size: '60sp'
+        size_hint: (None, None)
+        opacity: 0
+    
+    Label: 
+        id: scores
+        text: ""
+        pos_hint: {'center_x': 0.5, 'y': 0.45}
+        font_size: '40sp'
+        size_hint: (None, None)
+        opacity: 0
+
+    Button:
+        id: new_game
+        background_normal: "Image/icons/new_game_up.png"
+        background_down: "Image/icons/new_game_down.png"
+        size_hint: (None, None)
+        size: (150, 150)
+        pos_hint: {'center_x': 0.75, 'y': 0.1}
+        on_press: root.create_main_GUI()
+        opacity: 0
+        disabled: True
+
+    Button:
+        id: exit
+        background_normal: "Image/icons/exit_up.png"
+        background_down: "Image/icons/exit_down.png"
+        size_hint: (None, None)
+        size: (150, 150)
+        pos_hint: {'center_x': 0.25, 'y': 0.1}
+        opacity: 0
+        disabled: True
+        on_press: app.stop()  
+
+<PopupConfigureGame@Popup>:
+    id: popup_game_configuration
+    title: "Game settings"
+    size_hint: (0.35, 0.3)
+
+    RelativeLayout:
+
+        Label:
+            text: 'Enter your name'
+            font_size: '15sp'
+            size_hint: (0.4, 0.2)
+            pos_hint: {'x': 0, 'top': 1}
+
+        TextInput:
+            id: player_name
+            multiline: False
+            unfocus_on_touch: True
+            size_hint: (0.6, 0.2)
+            pos_hint: {'x': 0.4, 'top':1 }
+
+        Label:
+            text: "Choose AI's difficulty"
+            font_size: '15sp'
+            size_hint: (0.4, 0.2)
+            pos_hint: {'x': 0, 'y': 0.6}
+
+        Spinner:
+            id: LevelSpinner
+            text: '0 (Novice)'
+            values: '0 (Novice)','1 (Beginner)','2 (Intermediate)','3 (Hard)','4 (Expert)'  
+            size_hint: (0.6, 0.2)
+            pos_hint: {'x': 0.4, 'y': 0.6 }
+        Button:
+            text:"Start Game"
+            size_hint: (0.5, 0.175)
+            pos_hint: {'x': 0.5, 'y': 0}
+            on_press: app.domino.start_game(player_name.text, LevelSpinner.text)
+            on_release: root.dismiss()
+
+        Button:
+            text:"Return"
+            size_hint: (0.5, 0.175)
+            pos_hint: {'x': 0, 'y': 0}
+            on_press: root.dismiss()
+
+<PopupSaveMenu@Popup>:
+    id: popup_save
+    title: "Save Menu"
+    size_hint: (0.25, 0.4)
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint: (1, 0.5)
+        pos_hint: {'center_y': 0.5}
+        Button:
+            text:"Save Game"
+            on_press: Factory.PopupForSaving().open()
+        Button:
+            text: "Load Game"
+            on_press: Factory.PopupForLoading().open() 
+
+<PopupForSaving@Popup>:
+    id: popup_for_saving
+    title: "Enter the name of your game"
+    size_hint: (0.5, 0.2)
+    BoxLayout:
+        orientation:'vertical'
+        TextInput:
+            id: save_name
+            multiline: False
+            unfocus_on_touch: True
+        Button:
+            text: "Validate"
+            on_press: app.domino.when_save_current_game_button_pressed(save_name.text)
+            on_release: root.dismiss()
+        Button:
+            text: "Cancel"
+            on_press: root.dismiss() 
+            
+<PopupForLoading@Popup>:
+    title: "Choose saved game"
+    size_hint: (0.65, 0.65)
+    BoxLayout:
+        orientation: 'vertical'
+        FileChooserIconView:
+            size_hint: (1, 0.8)
+            id: file_chooser
+            path: os.getcwd() + "/saves"
+        Button:
+            pos_hint: {'center_x': 0.5}
+            size_hint: (0.25, 0.1)
+            text: "Validate"
+            on_press: app.domino.when_load_game_button_pressed(file_chooser.selection[0])
+            on_release: root.dismiss()
+        Button:
+            pos_hint: {'center_x': 0.5}
+            size_hint: (0.25, 0.1)
+            text: "Cancel"
+            on_press: root.dismiss() 

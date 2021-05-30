@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hand module &#8212; Documentation Dominos v1.00</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-hand">
+<span id="hand-module"></span><h1>hand module<a class="headerlink" href="#module-hand" title="Lien permanent vers ce titre">¶</a></h1>
+<dl class="py class">
+<dt id="hand.Hand">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">hand.</span></code><code class="sig-name descname"><span class="pre">Hand</span></code><a class="headerlink" href="#hand.Hand" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class that represent the hand of tiles that belongs to a player
+in a domino game.</p>
+<p>…</p>
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname"><span class="pre">tiles</span> <span class="pre">=</span> <span class="pre">list</span> <span class="pre">of</span> <span class="pre">tile</span> <span class="pre">object</span></code></dt>
+<dd><p>List of the tiles within the hand</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">add_tile(tile):</span></code></dt>
+<dd><p>Add a specified tile in the hand of its owner</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">score():</span></code></dt>
+<dd><p>Calculate the score of the hand</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">play(tile):</span></code></dt>
+<dd><p>Remove a tile from the hand in order to play it on the board</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">create_from_deck_without_draw(deck,</span> <span class="pre">number_of_player):</span></code></dt>
+<dd><p>Create the hand of the player in a game without draw</p>
+</dd></dl>
+
+<dl class="py method">
+<dt>
+<code class="sig-name descname"><span class="pre">create_from_deck_with_draw(deck,</span> <span class="pre">number_of_player):</span></code></dt>
+<dd><p>Create the hand of the player in a game with draw</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hand.Hand.add_tile">
+<code class="sig-name descname"><span class="pre">add_tile</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hand.Hand.add_tile" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Add a specified tile given in the parameters at the end of the hand.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>tile</strong> (<em>tile object</em>) – Contains the value of the tile added</p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hand.Hand.create_from_deck">
+<code class="sig-name descname"><span class="pre">create_from_deck</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deck</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_players</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_draw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hand.Hand.create_from_deck" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Create the hand of a player in a game without draw according to
+the number of players present in the game.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>deck</strong> (<em>deck object</em>) – The hand of the player is creating from the deck</p></li>
+<li><p><strong>number_of_players</strong> (<em>int</em>) – The number of players involved in the game, it’s used to know
+how many tiles each player will have</p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hand.Hand.remove">
+<code class="sig-name descname"><span class="pre">remove</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hand.Hand.remove" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Search for a tile in the hand, remove and returns it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="hand.Hand.score">
+<code class="sig-name descname"><span class="pre">score</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hand.Hand.score" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Returns the sum of the values of the tiles in the hand.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Dominos</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Alan CASTELLINO, Mélissa ROUCH, Mohamed ADOCH.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/source/hand.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

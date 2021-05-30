@@ -1,0 +1,2 @@
+#Required module: kivy
+#sudo python3 -m pip install kivy

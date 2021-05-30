@@ -1,0 +1,547 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gui module &#8212; Documentation Dominos v1.00</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-gui">
+<span id="gui-module"></span><h1>gui module<a class="headerlink" href="#module-gui" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Created on Thu Jan 14 11:19:16 2021</p>
+<dl class="py class">
+<dt id="gui.DominoApp">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">gui.</span></code><code class="sig-name descname"><span class="pre">DominoApp</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoApp" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">kivy.app.App</span></code></p>
+<dl class="py method">
+<dt id="gui.DominoApp.build">
+<code class="sig-name descname"><span class="pre">build</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoApp.build" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Initializes the application; it will be called only once.
+If this method returns a widget (tree), it will be used as the root
+widget and added to the window.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p>None or a root <code class="xref py py-class docutils literal notranslate"><span class="pre">Widget</span></code> instance
+if no self.root exists.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="gui.DominoGame">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">gui.</span></code><code class="sig-name descname"><span class="pre">DominoGame</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Bases : <code class="xref py py-class docutils literal notranslate"><span class="pre">kivy.uix.floatlayout.FloatLayout</span></code></p>
+<p>This is the GUI class where the main windows is created and updated.</p>
+<dl class="py attribute">
+<dt id="gui.DominoGame.NUMBER_OF_COLS">
+<code class="sig-name descname"><span class="pre">NUMBER_OF_COLS</span></code><em class="property"> <span class="pre">=</span> <span class="pre">21</span></em><a class="headerlink" href="#gui.DominoGame.NUMBER_OF_COLS" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="gui.DominoGame.NUMBER_OF_ROWS">
+<code class="sig-name descname"><span class="pre">NUMBER_OF_ROWS</span></code><em class="property"> <span class="pre">=</span> <span class="pre">9</span></em><a class="headerlink" href="#gui.DominoGame.NUMBER_OF_ROWS" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.add_on_bottom">
+<code class="sig-name descname"><span class="pre">add_on_bottom</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">board_repr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.add_on_bottom" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Utility function used to generate board_repr.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.add_on_left">
+<code class="sig-name descname"><span class="pre">add_on_left</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">board_repr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.add_on_left" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Utility function used to generate board_repr.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.add_on_right">
+<code class="sig-name descname"><span class="pre">add_on_right</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">board_repr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.add_on_right" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Utility function used to generate board_repr.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.add_on_top">
+<code class="sig-name descname"><span class="pre">add_on_top</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">board_repr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.add_on_top" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Utility function used to generate board_repr.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.add_tile">
+<code class="sig-name descname"><span class="pre">add_tile</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tiles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index_player</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.add_tile" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Adds a tile to the GUI rendition of a player’s hand.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tiles</strong> (<em>a list of Tiles to be added to the player's hand.</em>) – </p></li>
+<li><p><strong>index_player</strong> (<em>0 if it is the human player</em><em>, </em><em>1 otherwise.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.board_to_board_repr">
+<code class="sig-name descname"><span class="pre">board_to_board_repr</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.board_to_board_repr" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Computes a board_repr representation from a board object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p><strong>board_repr</strong></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p>the computed board_repr</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.build">
+<code class="sig-name descname"><span class="pre">build</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.build" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Creates the GUI when the main function is started.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.change_board">
+<code class="sig-name descname"><span class="pre">change_board</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.change_board" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Utility function used to create a new game.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.create_hand_grid">
+<code class="sig-name descname"><span class="pre">create_hand_grid</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.create_hand_grid" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Creates a GridLayout to display a player’s Hand.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.create_main_GUI">
+<code class="sig-name descname"><span class="pre">create_main_GUI</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.create_main_GUI" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Calls the popup window that will register the game information.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.display_end_game">
+<code class="sig-name descname"><span class="pre">display_end_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.display_end_game" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays a text announcing the player and the scores</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.display_game">
+<code class="sig-name descname"><span class="pre">display_game</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.display_game" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Updates the display of the player’s hands and the board</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>index_player</strong> (<em>0 if it is the human player</em><em>, </em><em>1 otherwise.</em>) – </p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.parcours_left">
+<code class="sig-name descname"><span class="pre">parcours_left</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">board_repr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.parcours_left" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Utility function used to generate board_repr.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.parcours_right">
+<code class="sig-name descname"><span class="pre">parcours_right</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">board_repr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.parcours_right" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Utility function used to generate board_repr.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.play_one_turn">
+<code class="sig-name descname"><span class="pre">play_one_turn</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">side</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.play_one_turn" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Plays one turn of the game: manages the tile selected by the human and then displays the computer’s move.
+If the computer has no tile to play, the player is warned and it is the end of the turn.
+If the player can’t play after the first computer move, the computer continues playing tiles until the human player is able to play again.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>side</strong> (<em>the selected side for the player's move</em><em> (</em><em>left</em><em> or </em><em>right</em><em>)</em>) – </p></li>
+<li><p><strong>tile</strong> (<em>the selected tile for the player's move</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.start_game">
+<code class="sig-name descname"><span class="pre">start_game</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.start_game" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Initialises all the variables used for a game.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.tile_is_flip">
+<code class="sig-name descname"><span class="pre">tile_is_flip</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.tile_is_flip" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Utility function used to generate board_repr.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.update_buttons_actions_for_placing_tiles">
+<code class="sig-name descname"><span class="pre">update_buttons_actions_for_placing_tiles</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.update_buttons_actions_for_placing_tiles" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Updates if side selection button action. Called each time a new tile is pressed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tile</strong> (<em>the last pressed tile</em>) – </p></li>
+<li><p><strong>index_player</strong> (<em>0 if it is the human player</em><em>, </em><em>1 otherwise.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.update_gui_state">
+<code class="sig-name descname"><span class="pre">update_gui_state</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.update_gui_state" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Updates the GUI state after each move. First computes the new board_repr (internal board representation used for display) and the displays the tiles according to board_repr.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>side</strong> (<em>the side on which the tile is to be played</em>) – </p></li>
+<li><p><strong>tile</strong> (<em>the tile to be played</em>) – </p></li>
+<li><p><strong>index_player</strong> (<em>0 if it is the human player</em><em>, </em><em>1 otherwise.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.when_change_background_button_pressed">
+<code class="sig-name descname"><span class="pre">when_change_background_button_pressed</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.when_change_background_button_pressed" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Called when the user wants to change the background image.
+This is a sequential run through all the images in the theme folder</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.when_change_sound_state_button_pressed">
+<code class="sig-name descname"><span class="pre">when_change_sound_state_button_pressed</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.when_change_sound_state_button_pressed" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Called when the Sound button is pressed.
+It toggles the sound effects on and off.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.when_hint_button_pressed">
+<code class="sig-name descname"><span class="pre">when_hint_button_pressed</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.when_hint_button_pressed" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Called when the user wants a hint on which tile he should play.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.when_load_game_button_pressed">
+<code class="sig-name descname"><span class="pre">when_load_game_button_pressed</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.when_load_game_button_pressed" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Called when the user wants to load a game.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.when_restart_button_pressed">
+<code class="sig-name descname"><span class="pre">when_restart_button_pressed</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.when_restart_button_pressed" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Called when the user want to start a new game.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.when_save_current_game_button_pressed">
+<code class="sig-name descname"><span class="pre">when_save_current_game_button_pressed</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.when_save_current_game_button_pressed" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Called when the user confirms ths save of the current game.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.when_tile_selected">
+<code class="sig-name descname"><span class="pre">when_tile_selected</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tile</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">largs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.when_tile_selected" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Function called when the user has selected a Tile and clicked on an orientation button (left or right)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tile</strong> (<em>the Tile which has been selected</em><em> (</em><em>last tile clicked</em><em>)</em>) – </p></li>
+<li><p><strong>index_player</strong> (<em>0 if it is the human player</em><em>, </em><em>1 otherwise.</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="gui.DominoGame.when_undo_button_pressed">
+<code class="sig-name descname"><span class="pre">when_undo_button_pressed</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.DominoGame.when_undo_button_pressed" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Called when the user wants to undo the last played move.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="cli.html#cli.CLI.None" title="cli.CLI.None">None</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Dominos</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Alan CASTELLINO, Mélissa ROUCH, Mohamed ADOCH.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/source/gui.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
