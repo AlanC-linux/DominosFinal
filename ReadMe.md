@@ -1,4 +1,4 @@
-## Dominos -- Release Candidate version
+## Dominos -- Production version
 
 ### Installation & usage
 
